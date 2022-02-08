@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "ddbb6b1b-be9c-4fef-9983-d4efa89ae43c",
+		"name": "Umbrella Devnet Express",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Request Enforcement",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [{\n\n    \"alertTime\": \"2018-07-17T16:27:12.152962Z\",\n\n    \"deviceId\": \"ba6a59f4-e692-4724-ba36-c28132c761de\",\n\n   \"deviceVersion\": \"13.7a\",\n\n   \"dstDomain\": \"internetbadguys.com\",\n\n   \"dstUrl\": \"http://internetbadguys.com/a-bad-url\",\n\n  \"eventTime\": \"2018-07-17T16:27:12.152962Z\",\n\n   \"protocolVersion\": \"1.0a\",\n\n   \"providerName\": \"Security Platform\"\n\n   },{\n\n   \"alertTime\": \"2018-07-17T16:27:12.152962Z\",\n\n   \"deviceId\": \"ba6a59f4-e692-4724-ba36-c28132c761de\",\n\n   \"deviceVersion\": \"13.7a\",\n\n   \"dstDomain\": \"moarinternetbadguys.com\",\n\n   \"dstUrl\": \"http://moarinternetbadguys.com/a-bad-url-again\",\n\n   \"eventTime\": \"2018-07-17T16:27:12.152962Z\",\n\n   \"protocolVersion\": \"1.0a\",\n\n   \"providerName\": \"Security Platform\"\n\n   }]"
+				},
+				"url": {
+					"raw": "https://s-platform.api.opendns.com/1.0/events?customerKey=<insert-your-enforcement-key-here>",
+					"protocol": "https",
+					"host": [
+						"s-platform",
+						"api",
+						"opendns",
+						"com"
+					],
+					"path": [
+						"1.0",
+						"events"
+					],
+					"query": [
+						{
+							"key": "customerKey",
+							"value": "<insert-your-enforcement-key-here>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request Enforcement",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": ""
+					},
+					{
+						"key": "",
+						"value": ""
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://s-platform.api.opendns.com/1.0/domains?customerKey=<insert-your-enforcement-key-here>",
+					"protocol": "https",
+					"host": [
+						"s-platform",
+						"api",
+						"opendns",
+						"com"
+					],
+					"path": [
+						"1.0",
+						"domains"
+					],
+					"query": [
+						{
+							"key": "customerKey",
+							"value": "<insert-your-enforcement-key-here>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Request Investigate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "<insert-your-investigate-key-here>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://investigate.api.umbrella.com/domains/categorization/internetbadguys.com?showLabels",
+					"protocol": "https",
+					"host": [
+						"investigate",
+						"api",
+						"umbrella",
+						"com"
+					],
+					"path": [
+						"domains",
+						"categorization",
+						"internetbadguys.com"
+					],
+					"query": [
+						{
+							"key": "showLabels",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request Investigate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "<insert-your-investigate-key-here>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"internetbadguys.com\", \"cnn.com\", \"cisco.com\"]"
+				},
+				"url": {
+					"raw": "https://investigate.api.umbrella.com/domains/categorization/",
+					"protocol": "https",
+					"host": [
+						"investigate",
+						"api",
+						"umbrella",
+						"com"
+					],
+					"path": [
+						"domains",
+						"categorization",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Request Enforcement",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://s-platform.api.opendns.com/1.0/domains/moarinternetbadguys.com?customerKey=<insert-your-enforcement-key-here>",
+					"protocol": "https",
+					"host": [
+						"s-platform",
+						"api",
+						"opendns",
+						"com"
+					],
+					"path": [
+						"1.0",
+						"domains",
+						"moarinternetbadguys.com"
+					],
+					"query": [
+						{
+							"key": "customerKey",
+							"value": "<insert-your-enforcement-key-here>"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Request Investigate Threatgrid samples",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "<insert-your-investigate-key-here>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "limit",
+						"value": "1"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://investigate.api.umbrella.com/samples/snibl.org",
+					"protocol": "https",
+					"host": [
+						"investigate",
+						"api",
+						"umbrella",
+						"com"
+					],
+					"path": [
+						"samples",
+						"snibl.org"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

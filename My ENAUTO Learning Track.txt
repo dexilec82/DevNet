@@ -1,0 +1,38 @@
+My Automation and Programmability Learning Track
+
+Step 1 - Python books and learning materials to get a good grasp of python basics, syntax structure and programming essentials. I have no background on programming much more on python so I decided to study and learn first about python and I recommend it because you will be dealing with a lot of scripting and most languages are most likely to be similar to python language and it turns out just right for me. Imagine you went straight to programmability and automation and you have no idea how to read python scripts although there are automation tools like ansible which is easy to read without having python knowledge.
+1. Python Crash Course by Eric Matthes
+2. Think Python How to Think Like a Computer Scientist by Allen B. Downey
+3. Python Programming: An Introduction To Computer Science by John Zelle
+4. Python for Network Engineers by David Bombal from Udemy Learning
+
+Step 2 - Learn the basics of Linux, GIT and some tools they use for automation like Ansible, Netmiko, NAPALM, etc which for the most part just do the same thing only differs on how they do it but it is good to get a good background of all these tools because why not, we are learning about automation and programmability.
+From Linkedin Learning
+1. Git Essential Training: The Basics by Kevin Skoglund
+2. Ansible Essential Training by Anthony Sequeira
+3. Learning Ansible by Anthony Sequeira
+4. Practical Linux for Network Engineers: Part 1 by David Bombal
+5. Practical Linux for Network Engineers: Part 2 by David Bombal
+
+Udemy Learning
+6. Ansible for Network Engineers by David Bombal
+
+Step 3 - Then I went to go deep dive on automation and programmability using these really good books especially the first two books, I really recommend reading it. Gives you very good knowledge about automation and programmability.
+
+1. Network and Programmability and Automation Fundamentals by Khaled Abuelenain
+2. Network Programmability and Automation by Jason Edelman
+3. Programming and Automating Cisco Networks by Ryan Tischer
+4. Cisco Software Defined Access by Srilatha Vemula
+5. Cisco Software Defined Wide Area Networks Designing Deploying and Securing your Next Generation WAN with Cisco SD-WAN by Jason Gooley
+
+Step 4 - Of course, the cisco learning materials from DevNet LL, features lab practices using their sandboxes.
+DevNet ENAUTO Learning Material
+Automating and Programming Cisco Enterprise Solutions v1.0 (300-435)
+https://developer.cisco.com/certification/exam-topic-en-auto/
+
+Step 6 - And lastly, the Nick Russo JobAid, thanks to him for making this study plan for ENAUTO, really recommend to go through all the resources he outlined, very good material. It is up to you to subscribe to his pluralsight tutorials but I had my resources enough already.
+Nick Russo JobAid
+Enterprise Automation Study Plan (ENAUTO)
+http://njrusmc.net/jobaid/jobaid.html
+
+
